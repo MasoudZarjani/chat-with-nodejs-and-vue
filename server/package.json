@@ -4,8 +4,8 @@
   "description": "Real Time Chat Web App using Express.js, Vue.js & Socket.io",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-watch src/main.js"
+    "build": "babel  ./ -d dist/",
+    "start": "nodemon server.js --exec babel-node"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/MasoudZarjani/chat-with-nodejs-and-vue#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "jalali-moment": "^3.3.3",
     "lodash": "^4.17.14",
@@ -33,7 +34,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-watch": "^7.0.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.19.1",
     "rimraf": "^2.6.3"
   }
 }
